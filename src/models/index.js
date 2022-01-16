@@ -34,8 +34,13 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-const synchronizeModelsWithDatabase = async () => await sequelize.sync();
-synchronizeModelsWithDatabase();
-console.log("Sinchronized Models");
+//Sync sequelize
+const development = require(__dirname + '/../config/config.json').development.database == config.database;
+const production = require(__dirname + '/../config/config.json').production.database == config.database;
+
+if (development || production) {
+  const synchronizeModelsWithDatabase = async () => await sequelize.sync();
+  synchronizeModelsWithDatabase();  
+} 
 
 module.exports = db;
