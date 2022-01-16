@@ -7,3 +7,5 @@ const server = globalRoutes(app);
 
 const port = 3000;
 server.listen(port, () => console.log(`Server is running in port ${port}`));
+
+module.exports = server;
