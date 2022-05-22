@@ -1,7 +1,5 @@
 # Desafio Trello
-Api to exercise knowledge learned in Alura ORM, Nodejs and Express courses. She looks like Trello or something to take notes.
-
-The concept is basic a LIST has none or several TASKS.
+Este desafio foi realizado a partir de um curso realizado na Alura.
 
 # End Points
 
